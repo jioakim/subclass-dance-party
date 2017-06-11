@@ -5,6 +5,7 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  background-image: url("img/beachPicture.jpg")
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -12,6 +13,10 @@ body, a:link, a:visited, a:active{
 .title, .addDancerButton{
   padding:5px 12px;
   float:right;
+}
+.lineUpButton {
+  padding:5px 0px 0px 5px;
+  float:left;
 }
 .topbar{
   height:32px;
@@ -24,4 +29,58 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+}
+.blinkyDancer{
+/*  border:10px solid yellow;
+  border-radius:10px;*/
+  position:absolute;
+  content: url("img/anglerfish.png");
+  height: 10%;
+}
+.blinkyDancer1{
+/*  border:10px solid yellow;
+  border-radius:10px;*/
+  position:absolute;
+  content: url("img/anglerfish.png");
+  height: 10%;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+.bouncyDancer{
+/*  border:10px solid green;
+  border-radius:10px;*/
+  position:absolute;
+  content: url('img/bate.gif');
+}
+.fightingDancer{
+  /*border:10px solid blue;*/
+  /*border-radius:10px;*/
+  position:absolute;
+  content: url('img/fightingFish.png');
+  height: 10%;
+  animation: myOrbit 4s linear infinite;
+}
+@keyframes myOrbit {
+    from { transform: rotate(0deg) translateX(90px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(90px) rotate(-360deg); }
+}
+
+/*------------------------------*/
+
+#crab {
+  animation: crab 4.5s ease;
+  height: 15%;
+  position:absolute;
+  bottom:0;
+  right:0;
+}
+
+@keyframes crab {
+  0% { transform:translate(500px, 0px) ; }
+  50% { transform:translate(-500px, 0px) ; }
+  100% { transform:translate(0) ; }
 }
